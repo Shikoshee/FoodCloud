@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cloud</title>
+
+    <link rel="stylesheet" href="Food Cloud.css">
+      
+      </head>
+      <div class="fullpage">
+      <body background color="white">
+        <header>
+            <figure>
+          <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo">
+          <figcaption>FoodCloud</figcaption>
+            </figure>
+            <figure>
+          <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo2">
+          <figcaption id="fig2">FoodCloud</figcaption>
+          </figure>
+          
+   
+          <div class="navbar">
+            <div>
+                <nav>
+                    <ul id="menu-items">
+                      <li class="dropdown">
+                        <a href="Home Page.html" id="home">
+                            <span>Home</span>
+                            <i class="bi bi-chevron-down dropdown-indicator"></i>
+                        </a>
+                        <ul id="dropdown-menu" class="hidden">
+                            
+                        </ul>
+                    </li>
+                    
+                      <li><a href="Product Listing.html">Groceries</a></li>
+                      <li><a href="Shopping cart.html">Shopping Cart</a></li>
+                      <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                  
+        </header>
+        <div class="search">
+            <input type="search" name="" placeholder="Type To Text">
+            <a href="#"> <button class="btn">search</button></a>
+        </div>
+        <script>
+            const home = document.getElementById("home");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+
+            home.addEventListener("click", function() {
+            dropdownMenu.classList.toggle("hidden"); // Toggle hidden class on click
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var dropdown = document.querySelector('.dropdown');
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    
+    dropdown.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default anchor click behavior
+        dropdownMenu.classList.toggle('hidden');
+    });
+    
+    // Close the dropdown if clicked outside
+    document.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+});
+
+
+        </script>
+        
+        
+           <h1>FOOD CLOUD</h1>
+         
+        <main>
+          <section class="hero">
+            <h2>Welcome to Foodcloud</h2><br> <h4>Fresh Vegetables </h4>
+            
+            <p><h5>Food Cloud Kenya is a discounted Grocery Boxes eCommerce Website.
+            <br>With weekly subscription where you can purchase groceries at an affordable price and it wil be delivered at your door step.</h5>
+            <BR>SHOP WITH US AND SAVE MORE</p>
+          </section>
+          <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {/*The upper part background*/
+                font-family: Arial, sans-serif;
+                background-color:#f2eeee;
+            }
+    
+            .slider-container {
+                width: 50%;
+                margin: 100px auto;
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 2px;
+            }
+    
+            .slider-wrapper {
+                display: flex;
+                transition: transform 0.01s ease-in-out;
+            }
+    
+            .slide {
+                min-width: 100%;
+                flex: 1;
+                transition: 0.2s;
+            }
+    
+            .slide img {
+                width: 90%;
+                height: 60%;
+            }
+    
+            .prev-btn, .next-btn {
+                position: absolute;
+                top: 40%;
+                transform: translateY(-50%);
+                font-size: 24px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                padding: 5px 15px;
+                cursor: pointer;
+                z-index: 1;
+            }
+    
+            .prev-btn {
+                left: -5px;
+            }
+    
+            .next-btn {
+                right: 70px;
+            }
+        </style>
+    <div>
+          <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="Pics\pexels-enginakyurt-1435735.jpg"  alt="Slide 1" width="50px" height="50px">
+                </div>
+                <div class="slide">
+                    <img src="Pics\pexels-brunoscramgnon-1337825.jpg" alt="Slide 2"  width="50px" height="50px">
+                </div>
+                <div class="slide">
+                    <img src="Pics\pexels-goumbik-1410157.jpg" alt="Slide 3"  width="50px" height="50px">
+                </div>
+                <div class="slide">
+                    <img src="Pics\pexels-element5-775032.jpg" alt="Slide 3"  width="50px" height="50px">
+                </div>
+            </div>
+            <span class="prev-btn" onclick="prevSlide()">&#10094;</span>
+            <span class="next-btn" onclick="nextSlide()">&#10095;</span>
+        </div>
+        
+        </div>
+        
+    
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+    
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.style.transform = `translateX(-${index * 100}%)`;
+                });
+            }
+    
+            function prevSlide() {
+                if (slideIndex > 0) {
+                    slideIndex--;
+                } else {
+                    slideIndex = totalSlides - 1;
+                }
+                showSlide(slideIndex);
+            }
+    
+            function nextSlide() {
+                if (slideIndex < totalSlides - 1) {
+                    slideIndex++;
+                } else {
+                    slideIndex = 0;
+                }
+                showSlide(slideIndex);
+            }
+    
+            setInterval(nextSlide, 3000); // Auto slide every 3 seconds
+        </script>
+     
+          <section class="news">
+        
+            <article>
+              <h3>Fresh vegetables. Grocery Close to You.</h3><br>
+              
+              <a href="#">Learn More</a>
+            </article>
+          </section>
+        </main>
+
+        <div class="container4">
+                    
+            <div class="pic">
+               
+                    <img src="Pics\pexels-goumbik-1410157.jpg" width="200px" height="200px">
+        
+                    <img src="Pics\pexels-pixabay-207085.jpg" width="200px" height="200px">
+
+                    <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="200px" height="200px">
+        
+                  <img src="Pics\pexels-element5-775032.jpg" width="200px" height="200px">
+      
+                  <img src="Pics\pexels-brunoscramgnon-1337825.jpg" width="200px" height="200px">
+            </div>
+            <footer id="footer" class="footer">
+        
+                <button id="member"><a href="Sign Up.html">Subscribe </a></button>
+        
+              <div class="container">
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-geo-alt icon"></i>
+                      <div>
+                          <h4>Address</h4>
+                          <p>
+                              A108 Adam Street <br>
+                              New York, NY 535022 - US<br>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-telephone icon"></i>
+                      <div>
+                          <h4>Reservations</h4>
+                          <p>
+                              <strong>Phone:</strong> +1 5589 55488<br>
+                              <strong>Email:</strong> info@example.com<br>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-clock icon"></i>
+                      <div>
+                          <h4>Opening Hours</h4>
+                          <p>
+                              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                              Sunday: Closed
+                          </p>
+                      </div>
+                  </div>
+                  <div>
+                      <div class="social-links d-flex">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                <div class="copyright">
+                </div>
+                
+              </div>
+          
+          
+            
+        
+          <div class="cop">
+              <p id="stay">
+                  stay young and health, follow healthy routine
+              </p>
+          </div>
+          <div class="follow" id="stay">
+              <p>
+                  also follow us on
+              </p>
+          </div>
+          <div class="pac">
+              <a href="Instagram.com" target="_blank">
+                  <img src="c:\xampp\htdocs\insta.jpg" width="50px" height="40px" >
+        
+                </a>
+                <a href="twitter.com" target="_blank">
+                  <img src="c:\xampp\htdocs\X icon.png" width="50px" height="40px">
+        
+                </a>
+                <a href="https://youtu.be/3NLLNWWYH9s" target="_blank">
+                  <img src="c:\xampp\htdocs\Utube icon.png" width="50px" height="40px">
+        
+                </a>
+          </div>
+        
+          <div class="contact">
+          </div>
+          <div class="phone">
+          </div>
+        
+        
+        <footer id="last">
+           <strong>&copy; Copyright</strong>  <strong><span>FoodCloud</span></strong>. All Rights Reserved
+        </footer>
+        </footer>
+        </body>
+        </div>
+      </html>
+    
+</body>
+</html>

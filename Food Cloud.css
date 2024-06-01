@@ -1,0 +1,346 @@
+body{
+    background-image: fill-content;
+}
+h1{
+    font-weight: 800;
+    font-size: 40px;
+    color: hsl(255, 67%, 2%);
+    margin-left: 48%;    
+}
+h2{
+    color: rgb(146, 18, 133);
+    padding-left: 45px;
+
+}
+
+
+.group{
+    display: flex;
+    padding-left: 30px;
+    margin: 0px;
+    position: relative;
+    font-size: 20px;
+    box-shadow: 9px black;
+    border: 4px;
+}
+.group label{
+    display: flex;
+}
+.group input{
+    height: 40px;
+    width: 260px;
+}
+#form{
+    background-color: aqua;
+    width: 300px;
+    height: 500px;
+    margin-left: 360px;
+    margin-top: 30px;
+    padding-left: 20px;
+    color: black;
+    padding-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+
+
+}
+#submit{
+    background-color: hsl(261, 92%, 49%);
+    width:100px;
+    margin-top: 2px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-inline-start: 30px;
+
+}
+#submit2{
+    background-color: hsl(261, 92%, 49%);
+    width:100px;
+    margin-top: 2px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration-color: black;
+    margin-inline-start: 30px;
+}
+
+
+
+
+/*header img{
+    border-radius: 50%;
+    /*margin-left: 400px;*/
+}
+
+.fullpage
+{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Screenshot\ 2024-03-02\ 182550.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+#logo{
+    margin-left: 1%;
+    margin-top: 2%;
+    border-radius: 50px;
+}
+#logo2{
+    margin-left: 92%;
+    margin-top: -30%;
+    margin-block-end: 3%;
+    border-radius: 50px;
+}
+#fig2{
+    margin-left: 92%;
+    margin-top: -3%;
+}
+section article p{/*Exception Care part*/
+    color: hsl(0, 100%, 2%);
+    margin-left: 200px;
+}
+main p{/*Your reliable... part*/
+    font-size: 18px;
+    padding-left: 10px;
+    margin-top: 3%;
+    margin-left: -23%;
+    color: rgb(10, 10, 10);
+}
+section article a{/*Learn More Part*/
+    color: #ecc711;      
+    margin-left: 400px;      
+    padding: 10px;
+    font-weight: 700;
+    font-size: 30px;
+}
+#Latest{
+    margin-left: 30%;
+    scroll-padding-left: 2000;
+    color:yellow;
+    font-size: 50px;
+    margin-top: -10%;
+    border-left-color: #1515c7;
+}
+main h2{
+    color: orange;
+    margin-left: 400px;
+    padding-top: 40px;
+    font-size: 30px;
+}
+
+main h2 {
+    width: fit-content; /* Adjust width if needed */
+    animation: move-text 10s linear infinite;
+  }
+  
+  @keyframes move-text {
+    from { transform: translateX(50%); } /* Start from right side */
+    to { transform: translateX(-50%); } /* Move to left side */
+  }
+  main h4 {
+    width: fit-content; /* Adjust width if needed */
+    animation: move-text 7s linear infinite;
+    font-size: 30px;
+  }
+  
+  @keyframes move-text {
+    from { transform: translateX(50%); } /* Start from right side */
+    to { transform: translateX(-50%); } /* Move to left side */
+  }
+
+  .navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding-left: 100px;
+    padding-top: 5px;
+    margin-top: -5%;
+    margin-left: 10%;
+    padding-bottom: 20px;
+    margin-right: 2px;
+}
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    text-align: right;
+    opacity: 0.8;
+    width: 700px;
+}
+nav ul
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    justify-content: center;
+    margin-right: 30px;
+}
+nav ul li a
+{
+    text-decoration:aqua;
+    font-size: 30px;
+    color: rgb(11, 11, 11);
+    margin-top: 0%;
+    font-family: sans-serif;
+}
+ul li a:hover{
+    background: #ffff00;
+}
+ 
+  h3{
+    margin-left: 30%;
+    margin-top: -7%;
+  }
+  #gross{
+    margin-top: 0%;
+    
+  }
+#last{
+    margin-top: 5%;
+}
+#member{
+    margin-left: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+    background-color: hsl(27, 95%, 50%); /* Green */
+    border: none;
+    color: #0c0c0c;
+    padding: 10px 20px;
+    margin-left: 40%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px; 
+    cursor: pointer;
+  transition: 0.3s ease all
+}
+#guest{
+    margin-left: 10%;
+    font-size: 20px;
+    background-color: hsl(50, 95%, 50%); 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px; /* Create a pill shape */
+    cursor: pointer;
+  transition: 0.3s ease all
+}
+.pic{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: linear-gradient(55deg, rgb(217, 242, 51), rgb(216, 64, 181) url(images\ \(1\).jpg));
+    height: 220px;
+}
+.cop{
+    color: #141212;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.follow{
+    color: rgb(225, 102, 223);
+    display: flex;
+    justify-content: center;
+}
+.pac{
+    display:inline-block;
+    justify-content:center;
+    float: inline-end;
+}
+.pac img{
+    border-radius: 50%;
+    margin-right: 200px;
+    padding-left: 10px;
+}
+.search{
+    margin-left: 40%;
+    width: 600px;
+    height: 90px;
+    margin-top: 3%;
+
+}
+/* Hide the dropdown menu by default */
+#dropdown-menu.hidden {
+    display: none;
+}
+
+/* Show the dropdown menu when the parent item is hovered over */
+.dropdown:hover #dropdown-menu {
+    display: block;
+}
+
+/* Basic styles for the dropdown menu */
+#dropdown-menu {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    position: absolute; /* Positions dropdown absolutely */
+    background-color: #fff; /* Sets background color */
+    border: 1px solid #ddd; /* Adds border */
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+/* Basic styles for dropdown items */
+#dropdown-menu li {
+    padding: 8px 12px; /* Adds padding */
+}
+
+#dropdown-menu li a {
+    color: #000; /* Sets link color */
+    text-decoration: none; /* Removes underline */
+}
+
+#dropdown-menu li a:hover {
+    background-color: #f1f1f1; /* Changes background color on hover */
+}
+.footer {
+    background: grey;
+    padding: 0px 0;
+    margin-top: 5%;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .icon {
+    margin-right: 0px;
+  
+}
+.footer div {/* Lower address*/
+    margin-bottom: 0;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.social-links a {
+    margin-right: 0px;
+}
+.social-links a img {
+    margin-right: 0px;
+}
+.social-links {
+  margin-left: 10%;
+}
+
+#last{
+  align-items: center;
+  margin-top: 8%;
+  color: #0c0c0c;
+  font-style: bold;
+  margin-left: 40%;
+}

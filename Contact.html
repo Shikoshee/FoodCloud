@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Contact.css">
+    <style>
+      .info-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+      }
+      .info-item .icon {
+          width: 50px; /* Adjust size as needed */
+          height: auto;
+          margin-right: 15px; /* Space between icon and text */
+      }
+      .info-item h3 {
+          margin: 0;
+          font-size: 1.25rem; /* Adjust size as needed */
+      }
+      .info-item p, .info-item div {
+          margin: 0;
+      }
+  </style>
+</head>
+<body>
+
+  <header>
+    <figure>
+      <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo">
+      <figcaption>FoodCloud</figcaption>
+        </figure>
+        <figure>
+      <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo2">
+      <figcaption id="fig2">FoodCloud</figcaption>
+      </figure>
+    <div class="navbar">
+      <div>
+          <nav>
+              <ul id="menu-items">
+                <li class="dropdown">
+                  <a href="Home Page.html" id="home">
+                      <span>Home</span>
+                      <i class="bi bi-chevron-down dropdown-indicator"></i>
+                  </a>
+                  <ul id="dropdown-menu" class="hidden">
+                  </ul>
+              </li>
+              
+                <li><a href="Product Listing.html">Groceries</a></li>
+                <li><a href="Shopping cart.html">Shopping Cart</a></li>
+              </ul>
+            </nav>
+            
+  </header>
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+  <div class="section-header">
+    <p class="need">Need Help? <span>Contact Us </span></p>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+                <img src="c:\Users\user\Downloads\Address.png" class="icon" alt="Address Icon">
+                <div>
+                    <h3>Our Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+                <img src="c:\Users\user\Downloads\Email.jpg" class="icon" alt="Email Icon">
+                <div>
+                    <h3>Email Us</h3>
+                    <p>contact@example.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+                <img src="c:\Users\user\Downloads\calls.png" class="icon" alt="Call Icon">
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+1 5589 55488</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+                <img src="c:\Users\user\Downloads\Share1.png" class="icon" alt="Opening Hours Icon">
+                <div>
+                    <h3>Opening Hours</h3>
+                    <div>
+                        <strong>24 hours:  </strong>  <strong>Everyday</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  (function(){
+      emailjs.init("mwashshee01@gmail.com"); // Replace "YOUR_USER_ID" with your actual user ID from EmailJS
+  })();
+</script>
+
+<div class="col-lg-6">
+            <form class="contact-form php-email-form mb-4" role="form" action="https://bootstrapmade.com/contact/submit/" method="POST" data-recaptcha-site-key="6LemuFwkAAAAANL4HyqwdRkbf9qwovHeRoEQZ9VH" id="form1">
+                <div class="row">
+                    <div class="form-group d-none"> 
+                    <div class="form-group col-md-6"> <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" required="">
+                    <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" required=""></div></div>
+                    <div class="row">
+                        <div class="form-group col-md-12"> <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" required=""></div>
+                        <div class="form-group col-md-12"><textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="10" required=""></textarea></div>
+                        <div class="col-md-12">
+                            <input type="checkbox" class="form-control" name="privacy-policy" value="accept"> <span class="checkmark"></span> </label>
+                            <label class="form-group custom-checkbox float-left">I've read and accept the <a href="https://bootstrapmade.com/privacy/">privacy policy</a>. 
+
+                            </label>
+                            </div>   
+                         <button type="submit"  id="send">Send Message</button>
+                        
+                   
+                </form>
+
+                <p id="response-message" style="display:none;">Message sent successfully</p>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+            
+                            const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+                            const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+            
+                            emailjs.sendForm(serviceID, templateID, this)
+                                .then(() => {
+                                    document.getElementById('response-message').style.display = 'block';
+                                    document.getElementById('contact-form').reset();
+                                }, (err) => {
+                                    console.log(JSON.stringify(err));
+                                });
+                        });
+                    });
+                </script>
+            </div>
+        
+    </div>
+
+
+
+    <footer id="footer" class="footer">
+        
+        <button id="member"><a href="Sign Up.html">Subscribe </a></button>
+
+      <div class="container">
+          <div class="d-flex align-items-center">
+              <i class="bi bi-geo-alt icon"></i>
+              <div>
+                  <h4>Address</h4>
+                  <p>
+                      A108 Adam Street <br>
+                      New York, NY 535022 - US<br>
+                  </p>
+              </div>
+          </div>
+          <div class="d-flex align-items-center">
+              <i class="bi bi-telephone icon"></i>
+              <div>
+                  <h4>Reservations</h4>
+                  <p>
+                      <strong>Phone:</strong> +1 5589 55488 55<br>
+                      <strong>Email:</strong> info@example.com<br>
+                  </p>
+              </div>
+          </div>
+          <div class="d-flex align-items-center">
+              <i class="bi bi-clock icon"></i>
+              <div>
+                  <h4>Opening Hours</h4>
+                  <p>
+                      <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                      Sunday: Closed
+                  </p>
+              </div>
+          </div>
+          <div>
+              <div class="social-links d-flex">
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+        </div>
+        
+      </div>
+  
+  
+    
+
+  <div class="cop">
+      <p id="stay">
+          stay young and health, follow healthy routine
+      </p>
+  </div>
+  <div class="follow" id="stay2">
+      <p>
+          also follow us on
+      </p>
+  </div>
+  <div class="pac">
+      <a href="Instagram.com" target="_blank">
+          <img src="c:\xampp\htdocs\insta.jpg" width="50px" height="40px" >
+
+        </a>
+        <a href="twitter.com" target="_blank">
+          <img src="c:\xampp\htdocs\X icon.png" width="50px" height="40px">
+
+        </a>
+        <a href="https://youtu.be/3NLLNWWYH9s" target="_blank">
+          <img src="c:\xampp\htdocs\Utube icon.png" width="50px" height="40px">
+
+        </a>
+  </div>
+
+  <div class="contact">
+  </div>
+  <div class="phone">
+  </div>
+
+
+<footer id="last">
+   <strong>&copy; Copyright</strong>  <strong><span>FoodCloud</span></strong>. All Rights Reserved
+</footer>
+</footer>
+</body>
+</div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shopping.css">
+    <script defer src="shopping.js"></script>
+
+
+</head>
+<body>
+
+  <header>
+    <figure>
+  <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo">
+  <figcaption>FoodCloud</figcaption>
+    </figure>
+    <figure>
+  <img src="Pics\pexels-janetrangdoan-1132047.jpg" width="70px" height="70px" id="logo2">
+  <figcaption id="fig2">FoodCloud</figcaption>
+  </figure>
+  
+
+  <div class="navbar">
+    <div>
+        <nav>
+            <ul id="menu-items">
+              <li class="dropdown">
+                <a href="Home Page.html" >
+                    <span>Home</span>
+                    <i class="bi bi-chevron-down dropdown-indicator"></i>
+                </a>
+                
+            </li>
+            
+              <li><a href="Product Listing.html">Groceries</a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          
+</header>
+<div class="search">
+  <input type="search" name="" placeholder="Type To Text">
+  <a href="#"> <button class="btn">search</button></a>
+</div>
+    <div class="logo">
+    <img src="Pics\Cart.jpg" width="150px" height="150px" id="logo">
+
+
+<p><h2>Your cart is empty!!</h2> </p>
+<p>Browse our products and enjoy our services</p>
+<a href="Product Listing.html" id="home">Start Shopping</a>
+</div>
+
+<h1>Your Shopping Cart</h1>
+<ul id="cart-items">
+    <!-- Cart items will be displayed here -->
+</ul>
+
+<button id="clear-cart">CLEAR CART</button>
+<button id="payment-cart">PAY</button>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Get the shopping cart from local storage
+      let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
+      // Get the cart items container
+      const cartItemsContainer = document.getElementById('cart-items');
+
+      // Iterate over the shopping cart items and display them
+      shoppingCart.forEach(product => {
+          // Create a div for the product
+          const productDiv = document.createElement('div');
+
+          // Create an img element for the product image
+          const productImg = document.createElement('img');
+          productImg.src = product.image;
+          productImg.alt = product.name;
+          productImg.style.width = '150px';
+          productImg.style.height = '150px';
+
+          // Create a p element for the product name
+          const productName = document.createElement('p');
+          productName.textContent = product.name;
+
+          // Create a p element for the product price
+          const productPrice = document.createElement('p');
+          productPrice.textContent = product.price;
+
+          // Append the image, name, and price to the product div
+          productDiv.appendChild(productImg);
+          productDiv.appendChild(productName);
+          productDiv.appendChild(productPrice);
+
+          // Append the product div to the cart items container
+          cartItemsContainer.appendChild(productDiv);
+      });
+  });
+</script>
+<a href="Product Listing.html" class="more">See More</a>
+
+<div>
+<div class="images">
+    <div class="list">
+        
+        <div>
+            <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="Pics\bananas.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px" ></a>
+            <h4>Bananas</h4>
+            <p class="ingredients">Expiry date, 6th November 2024</p>
+            <p class="price">$14.95</p><button class="buy-button">Buy</button>
+            </div>
+        <div>
+            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="Pics\orange.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Oranges</h4>
+            <p class="ingredients">Expiry date, 6th November 2024</p>
+            <p class="price">$8.95</p><button class="buy-button">Buy</button>
+            </div>
+        <div>
+            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="Pics\Apples.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Apples</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $12.95
+            </p><button class="buy-button">Buy</button>
+</div>
+
+         <div>
+            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="Pics\Guavas.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Guavas</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $9.95
+            </p><button class="buy-button">Buy</button>
+         </div>
+         <div class="col-lg-4 menu-item4">
+            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="Pics\Kales.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Kales</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $12.95
+            </p><button class="buy-button">Buy</button>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-4 menu-item4">
+            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="Pics\Cabagge.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Cabbage</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $9.95
+            </p><button class="buy-button">Buy</button>
+          </div><!-- Menu Item -->
+
+
+          <div class="potatoes">
+            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="Pics\Potatoes.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px"></a>
+            <h4>Potatoes</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $8.95
+            </p><button class="buy-button">Buy</button>
+          </div><!-- Menu Item -->
+
+          <div class="parsley">
+            <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="pics\Parsley.jpg" class="menu-img img-fluid" alt="" height="150px" width="160px" ></a>
+            <h4>Parsley</h4>
+            <p class="ingredients">
+              Expiry date, 6th November 2024
+            </p>
+            <p class="price">
+              $12.95
+            </p><button class="buy-button">Buy</button>
+          </div><!-- Menu Item -->
+          </div>
+          </div>
+          </div>
+
+</div>
+
+<footer id="footer" class="footer">
+        
+  <button id="member"><a href="Sign Up.html">Subscribe </a></button>
+
+<div class="container">
+    <div class="d-flex align-items-center">
+        <i class="bi bi-geo-alt icon"></i>
+        <div>
+            <h4>Address</h4>
+            <p>
+                A108 Adam Street <br>
+                New York, NY 535022 - US<br>
+            </p>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+            <h4>Reservations</h4>
+            <p>
+                <strong>Phone:</strong> +1 5589 55488<br>
+                <strong>Email:</strong> info@example.com<br>
+            </p>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <i class="bi bi-clock icon"></i>
+        <div>
+            <h4>Opening Hours</h4>
+            <p>
+                <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                Sunday: Closed
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="social-links d-flex">
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="copyright">
+  </div>
+  
+</div>
+
+
+
+
+<div class="cop">
+<p id="stay">
+    stay young and health, follow healthy routine
+</p>
+</div>
+<div class="follow" id="stay">
+<p>
+    also follow us on
+</p>
+</div>
+<div class="pac">
+<a href="Instagram.com" target="_blank">
+    <img src="c:\xampp\htdocs\insta.jpg" width="50px" height="40px" >
+
+  </a>
+  <a href="twitter.com" target="_blank">
+    <img src="c:\xampp\htdocs\X icon.png" width="50px" height="40px">
+
+  </a>
+  <a href="https://youtu.be/3NLLNWWYH9s" target="_blank">
+    <img src="c:\xampp\htdocs\Utube icon.png" width="50px" height="40px">
+
+  </a>
+</div>
+
+<div class="contact">
+</div>
+<div class="phone">
+</div>
+
+
+<footer id="last">
+<strong>&copy; Copyright</strong>  <strong><span>FoodCloud</span></strong>. All Rights Reserved
+</footer>
+</footer>
+</body>
+</div>
+</body>
+</html>
